@@ -48,12 +48,12 @@ from twisted.internet import posixbase
 
 from qtreactor import qtreactor_config
 
-if qtreactor_config.get_qt_name() == "PyQt4":
-    from PyQt4 import QtCore
-elif qtreactor_config.get_qt_name() == "PySide":
-    from PySide import QtCore
-else:
-    raise Exception("Must Have PyQt4 or PySide")
+#if qtreactor_config.get_qt_name() == "PyQt4":
+#    from PyQt4 import QtCore
+#elif qtreactor_config.get_qt_name() == "PySide":
+from PySide import QtCore
+#else:
+#    raise Exception("Must Have PyQt4 or PySide")
 
 class TwistedSocketNotifier(QtCore.QObject):
     """
